@@ -75,6 +75,7 @@
     "react": "16.8.6",
     "react-bootstrap": "0.32.4",
     "react-dom": "16.8.6",
+    "react-hot-loader": "4.13.0",
     "react-i18next": "11.7.3",
     "react-redux": "6.0.0",
     "react-router-dom": "4.3.1",

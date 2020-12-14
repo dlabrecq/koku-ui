@@ -52,7 +52,10 @@ module.exports = env => {
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-maps' : 'eval',
     // Moved multiple entries to index.tsx in order to help speed up webpack
-    entry: path.join(srcDir, 'index.tsx'),
+    entry: [
+      !isProduction && 'react-hot-loader/patch',
+      path.join(srcDir, 'index.tsx'),
+    ],
     output: {
       path: distDir,
       filename: isProduction ? '[chunkhash].bundle.js' : '[name].bundle.js',
@@ -86,6 +89,7 @@ module.exports = env => {
                   ],
                   '@babel/plugin-syntax-jsx',
                   '@babel/plugin-syntax-dynamic-import',
+                  'react-hot-loader/babel',
                 ],
               },
             },
