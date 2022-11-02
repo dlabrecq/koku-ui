@@ -32,7 +32,7 @@
     "verify": "yarn lint && yarn test && yarn build"
   },
   "dependencies": {
-    "@patternfly/patternfly": "4.215.1",
+    "@patternfly/patternfly": "4.219.2",
     "@patternfly/react-charts": "6.94.5",
     "@patternfly/react-core": "4.239.0",
     "@patternfly/react-icons": "4.90.0",
