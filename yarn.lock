@@ -879,15 +879,10 @@
     lodash "^4.17.19"
     tslib "^2.0.0"
 
-"@patternfly/react-tokens@4.91.0":
-  version "4.91.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.91.0.tgz#f173a5a36911a789ea966a7e5955de92aeccf8fc"
-  integrity sha512-QeQCy8o8E/16fAr8mxqXIYRmpTsjCHJXi5p5jmgEDFmYMesN6Pqfv6N5D0FHb+CIaNOZWRps7GkWvlIMIE81sw==
-
-"@patternfly/react-tokens@^4.91.0", "@patternfly/react-tokens@^4.93.4":
-  version "4.93.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.93.4.tgz#fb32ac08db9803127adc17449611e6a3a6cdef2b"
-  integrity sha512-0tW5BanDjaw42wiZkLu0fmg5P/WruUbxmUpRT7RJS7QKO3vL4Rh9NrXydIPVU7APpEnZyf/S4TJUeosEILLCRA==
+"@patternfly/react-tokens@4.93.10", "@patternfly/react-tokens@^4.91.0", "@patternfly/react-tokens@^4.93.4":
+  version "4.93.10"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.93.10.tgz#5a84999c63c2cf031fefdc9a22dfcbf2e2b0744d"
+  integrity sha512-F+j1irDc9M6zvY6qNtDryhbpnHz3R8ymHRdGelNHQzPTIK88YSWEnT1c9iUI+uM/iuZol7sJmO5STtg2aPIDRQ==
 
 "@pnpm/network.ca-file@^1.0.1":
   version "1.0.1"
