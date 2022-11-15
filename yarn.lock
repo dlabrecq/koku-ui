@@ -928,10 +928,10 @@
     eslint-plugin-rulesdir "^0.1.0"
     prettier "^2.1.2"
 
-"@redhat-cloud-services/frontend-components-config-utilities@^1.5.23":
-  version "1.5.23"
-  resolved "https://registry.npmjs.org/@redhat-cloud-services/frontend-components-config-utilities/-/frontend-components-config-utilities-1.5.23.tgz"
-  integrity sha512-pYdbF9NTJ2wgYpG49cNXVCbi0Yv+xss18pPjx2RDVlV+Fe+u9l+WtxG2GzpOGxx2w4UnpMtFgQH9nbe045lYCQ==
+"@redhat-cloud-services/frontend-components-config-utilities@^1.5.25":
+  version "1.5.25"
+  resolved "https://registry.yarnpkg.com/@redhat-cloud-services/frontend-components-config-utilities/-/frontend-components-config-utilities-1.5.25.tgz#73060c13b0bbeef216714484892c1a00cf3798b3"
+  integrity sha512-bjviVgey6HpzbGqLNgS233qMClC38nwP1IQEMtkSyjD7Bxe1GOuPG5EHrbwkVCj22g4g7lh87UF6/fFuV8+Q+Q==
   dependencies:
     node-fetch "2.6.7"
 
