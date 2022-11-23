@@ -813,10 +813,10 @@
     lodash "^4.17.19"
     tslib "^2.0.0"
 
-"@patternfly/react-tokens@4.93.10", "@patternfly/react-tokens@^4.93.10":
-  version "4.93.10"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.93.10.tgz#5a84999c63c2cf031fefdc9a22dfcbf2e2b0744d"
-  integrity sha512-F+j1irDc9M6zvY6qNtDryhbpnHz3R8ymHRdGelNHQzPTIK88YSWEnT1c9iUI+uM/iuZol7sJmO5STtg2aPIDRQ==
+"@patternfly/react-tokens@4.94.0", "@patternfly/react-tokens@^4.93.10":
+  version "4.94.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.94.0.tgz#d605487667c544a71ab3495a19e3ad2777191943"
+  integrity sha512-fYXxUJZnzpn89K2zzHF0cSncZZVGKrohdb5f5T1wzxwU2NZPVGpvr88xhm+V2Y/fSrrTPwXcP3IIdtNOOtJdZw==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.8":
   version "0.5.8"
