@@ -4,6 +4,8 @@ on:
     branches:
       - prod-hccm
       - prod-ros
+      - test
+      - main
 env:
   BRANCH: ${{ github.base_ref }}
 
@@ -17,24 +19,29 @@ jobs:
       - run: |
           git fetch --prune --unshallow
       - name: Tag this release
+        with:
+          BRANCH: ${{ env.BRANCH }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ env.BRANCH }}
         run: |
           DATE=$(date +"%Y.%m.%d")
           PREV_RELEASE=$(git tag --list | tail -1)
           MINOR_VERSION=0
           case $PREV_RELEASE in
             *"$DATE"*)
-              MINOR_VERSION="$PREV_RELEASE" | cut -d'.' -f5
+              MINOR_VERSION=$("$PREV_RELEASE" | cut -d'.' -f5)
               MINOR_VERSION=$((MINOR_VERSION+1))
               ;;
             *)
               MINOR_VERSION=0
               ;;
           esac
-          TAG="r.$DATE.$MINOR_VERSION"
+          APP_PREFIX=$("${{ env.BRANCH }}" | cut -d'-' -f2)
+          TAG="r-$APP_PREFIX.$DATE.$MINOR_VERSION"
           git config --local user.email "cost-mgmt@redhat.com"
           git config --local user.name "Cost Management Release Action"
           git log $(git tag --list | tail -1)..${{ env.BRANCH }} | git tag -a $TAG -F -
           git push origin $TAG
+          env
         shell: bash
