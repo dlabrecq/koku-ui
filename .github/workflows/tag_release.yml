@@ -4,6 +4,7 @@ on:
     branches:
       - prod-hccm
       - prod-ros
+      - main
 env:
   BRANCH: ${{ github.base_ref }}
 
@@ -13,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: ${{ env.BRANCH }}
+          ref: $BRANCH
       - run: |
           git fetch --prune --unshallow
       - name: Tag this release
@@ -23,19 +24,19 @@ jobs:
           DATE=$(date +"%Y.%m.%d")
           PREV_RELEASE=$(git tag --list | tail -1)
           MINOR_VERSION=0
-          APP_PREFIX=${{ env.BRANCH }} | cut -d'-' -f2
           case $PREV_RELEASE in
             *"$DATE"*)
-              MINOR_VERSION="$PREV_RELEASE" | cut -d'.' -f5
+              MINOR_VERSION=$(echo "$PREV_RELEASE" | cut -d'.' -f5)
               MINOR_VERSION=$((MINOR_VERSION+1))
               ;;
             *)
               MINOR_VERSION=0
               ;;
           esac
+          APP_PREFIX=$(echo "$BRANCH" | cut -d'-' -f2)
           TAG="r-$APP_PREFIX.$DATE.$MINOR_VERSION"
           git config --local user.email "cost-mgmt@redhat.com"
           git config --local user.name "Cost Management Release Action"
-          git log $(git tag --list | tail -1)..${{ env.BRANCH }} | git tag -a $TAG -F -
+          git log $(git tag --list | tail -1)..$BRANCH | git tag -a $TAG -F -
           git push origin $TAG
         shell: bash
