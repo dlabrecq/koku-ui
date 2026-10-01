@@ -2,7 +2,7 @@
 
 These instructions apply when creating or changing a screen, settings tab, table, toolbar, modal, or chart in `apps/koku-ui-hccm`. They do not apply to `apps/koku-ui-sources`, `apps/koku-ui-ros`, or `apps/koku-ui-onprem`. Those apps keep their own instructions.
 
-Before writing any component, read:
+Follow `.cursor/rules/hccm-ui-style.mdc` as well. Cursor attaches that rule when route files are open. It is a short reminder of the same standards, not a second copy. Before writing any component, read:
 
 - `.cursor/skills/transform-generated-ui/organization.md`
 - `.cursor/skills/transform-generated-ui/composition.md`
